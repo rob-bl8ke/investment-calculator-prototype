@@ -1,4 +1,4 @@
-@if (!results) {
+@if (!results()) {
     <p class="center">Please enter some values and press "Calculate".</p>
 } @else {   
     <table>
@@ -10,7 +10,7 @@
             <th>Invested Capital</th>
         </thead>
         
-        @for (result of results; track result.year) {
+        @for (result of results(); track result.year) {
             <tbody>
                 <td>{{result.year}}</td>
                 <td>{{result.valueEndOfYear | currency:"R" }}</td>
