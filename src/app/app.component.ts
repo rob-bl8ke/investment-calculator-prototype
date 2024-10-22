@@ -9,7 +9,16 @@ import { UserInputComponent } from './user-input/user-input.component';
   templateUrl: './app.component.html',
 })
 export class AppComponent {
-  calculateInvestmentResults(data: {
+  onCalculate(data: {
+    initialInvestment: number;
+    annualInvestment: number;
+    expectedReturn: number;
+    duration: number;
+  }) {
+    console.log(this.calculateInvestmentResults(data));
+  }
+
+  private calculateInvestmentResults(data: {
     initialInvestment: number;
     annualInvestment: number;
     expectedReturn: number;
